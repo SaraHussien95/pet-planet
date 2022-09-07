@@ -1,0 +1,36 @@
+
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    "\$${product.price}",
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.w600,
+                      color: kTextWhiteColor,
+                    ),
+                  ),
+                  InkWell(
+                    borderRadius: BorderRadius.circular(50),
+                    onTap: () {},
+                    child: Container(
+                      padding: EdgeInsets.all(defaultPadding / 2),
+                      height: 28,
+                      width: 28,
+                      decoration: BoxDecoration(
+                        color: KnavbarGrayColor,
+                        shape: BoxShape.circle,
+                      ),
+                      child: SvgPicture.asset(
+                        "assets/icons/Heart Icon_2.svg",
+                        color: product.isFavourite
+                            ? KbtnRedColor
+                            : kTextWhiteColor,
+                      ),
+                    ),
+                  ),
+                ],
+              )
+
+
+
